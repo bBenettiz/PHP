@@ -1,0 +1,14 @@
+<?php
+
+// Receber os dados enviados pelo webhook
+$inputJSON = file_get_contents('php://input');
+$data = json_decode($inputJSON, true);
+
+// Aqui você pode processar os dados recebidos conforme necessário
+// Por exemplo, você pode acessar campos específicos dos dados ou executar alguma lógica
+
+// Responder ao webhook (opcional)
+$response = array('status' => 'success', 'message' => 'Webhook received successfully');
+echo json_encode($response);
+
+?>
